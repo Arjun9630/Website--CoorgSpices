@@ -1,0 +1,420 @@
+/* Reset some default styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for the navigation bar */
+.nav-container {
+    display: flex;
+    position: fixed; /* Fix the navbar at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    background-color: hsl(180, 68%, 22%);
+    padding: 15px 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional shadow for better visibility */
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    display: flex;
+    gap: 100px;
+    width: 100%; /* Ensure the navbar spans the full width */
+}
+
+/* Logo styles */
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Saira Stencil One', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-left: 25px; /* Space between logo and buttons */
+    margin-top: 3px; /* Space between logo and buttons */
+}
+
+/* Navigation buttons */
+.nav-button {
+    background-color: hsl(180, 63%, 19%);
+    font-size: 16px;
+    color: hsl(0, 0%, 78%);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 555px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #017474;
+}
+
+
+.cart-button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position absolutely within the nav-bar */
+    right: 60px;
+    padding: 8px 10px;
+    background-color: hsl(180, 63%, 19%);
+    border-radius: 400px;
+    margin-top: -4px;
+}
+
+.cart-button:hover {
+    background-color: hsl(180, 98%, 23%);
+}
+
+.cart-icon {
+    width: 24px; /* Set the width of the cart icon */
+    height: 24px; /* Set the height of the cart icon */
+}
+
+.image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    top: -11px;
+}
+
+.responsive-image {
+    position: absolute; /* Position the image absolutely within the container */
+    top: -20px; /* Adjust the top position to show the desired segment */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+
+/* Main container styles */
+.main-container {
+    text-align: center; /* Center text horizontally */
+    padding: 50px 20px; /* Padding around the content */
+    position: relative; /* Enable positioning of child elements */
+    margin-bottom: 20px; /* Space below the main container */
+}
+
+/* Ensure heading and paragraph are aligned to the top */
+.main-heading {
+    font-size: 2.5em;
+    margin-bottom: 10px; /* Space between heading and paragraph */
+    color: #ffffff;
+}
+
+.main-text {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+
+.popup-container {
+    position: fixed; /* Fix position relative to the viewport */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 900; /* Ensure it appears above other content */
+}
+
+/* Popup menu styles */
+.popup-menu {
+    position: absolute; /* Absolute positioning for the popup */
+    font-size: 20px;
+    font-family: 'Saira Stencil One', sans-serif;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px; /* Width of the popup */
+    height: 100%; /* Full height of the screen */
+    background-color: #0e4c4c; /* Background color */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Shadow for depth */
+    transition: left 0.3s ease; /* Smooth slide-in transition */
+    padding-top: 20px; /* Padding for top content */
+}
+
+/* Popup trigger button styles */
+.popup-trigger {
+    position: absolute; /* Absolute position relative to popup menu */
+    top: 50%; /* Center vertically within the popup menu */
+    left: 100%; /* Positioned at the edge of the popup menu */
+    transform: translate(-10%, -50%); /* Center button on left edge */
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    z-index: 1001; /* Above the popup menu */
+    transition: left 0.3s ease; /* Same transition as the popup menu */
+}
+
+/* When the popup is shown */
+.popup-menu.show {
+    left: 0; /* Move into view */
+}
+
+/* Adjust button position when popup is shown */
+.popup-menu.show + .popup-trigger {
+    left: 260px; /* Adjust this value for spacing between button and menu */
+}
+
+/* Popup menu list styles */
+.popup-menu ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin-top: 85px;
+    margin-left: 10px;
+}
+
+.popup-menu li {
+    padding: 15px; /* Padding for each item */
+}
+
+.popup-menu li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    display: block; /* Make entire area clickable */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.popup-menu li a:hover {
+    background-color: #f0f0f0; /* Hover background color */
+}
+
+.arrow-icon {
+    width: 35px; /* Set the width of the image */
+    height: 35px; /* Set the height of the image */
+}
+
+/* Image gallery styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+    gap: 20px; /* Adjust space between images */
+    padding: 30px; /* Space around the gallery */
+    background-color: hsl(180, 82%, 11%); /* Background color for the gallery section */
+}
+
+.gallery-item {
+    overflow: hidden; /* Ensure images don't overflow */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for a subtle 3D effect */
+}
+
+.gallery-item img {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 80px; /* Add padding to account for the height of the fixed navbar */
+    background-color: #053333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.copyright-two {
+    padding: 22px 0px;
+}
+
+.copyright-border {
+    border-top: 1px solid #d1d1d1;
+}
+
+.container {
+    max-width: 1430px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6, .col-md-6{
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Shop page layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll; /* Enables scrolling on the entire page */
+}
+
+.shop-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping so that gallery and details stay side by side */
+    gap: 20px;
+    padding: 20px;
+    background-color: #053333;
+    height: 100vh; /* Full height of the viewport */ 
+}
+
+.product-gallery {
+    flex: 1; /* Increased size of the gallery */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 100%; /* Ensures the gallery stays within the viewport height */
+    
+}
+
+.product-item {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 1; /* Keeps the details section narrower */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the content to the top */
+    padding: 20px;
+    background-color: #053333;
+    border-radius: 8px;
+    max-height: 100%; /* Ensures the details stay within the viewport height */
+    overflow-y: auto; /* Allows the details section to scroll if it overflows */
+    margin-left: 50px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price-options button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.price-options button:hover {
+    background-color: #bbb;
+}
+
+.quantity-select {
+    margin: 20px 0;
+}
+
+.quantity-select label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.quantity-select select {
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.add-to-cart {
+    background-color: #ddd;
+}
+
+.buy-now {
+    background-color: #ddd;
+}
+
+.product-details {
+    flex: 1; /* Keeps the details section narrower */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the content to the top */
+    padding: 20px;
+    background-color:#053333;
+    border-radius: 8px;
+    max-height: 100%; /* Ensures the details stay within the viewport height */
+    overflow-y: auto; /* Allows the details section to scroll if it overflows */
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Adds space below the product name */
+}
+
+.price-label {
+    font-size: 18px;
+    margin-bottom: 15px; /* Adds space below the price label */
+}
+
+.price-options {
+    margin-bottom: 20px; /* Adds space below the price options */
+}
+
+.quantity-select {
+    margin-bottom: 25px; /* Adds space below the quantity selector */
+}
+
+.btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Adds space below each button */
+    background-color: #ddd;
+    width: 400px;
+}
+
+.btn:hover {
+    background-color: #bbb;
+}
+
+/* Ensure body takes the full height of the viewport */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Wrapper for main content and footer */
+.content-wrapper {
+    flex: 1; /* Make the content fill the space, pushing the footer down */
+}
+
+/* Footer styles */
+.footer {
+    background-color: hsl(180, 63%, 19%); /* Matching theme colors */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}

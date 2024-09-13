@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coorg Spices</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <div class="logo">Coorg Spices Emporium</div>
+            <div class="nav-buttons">
+                <button class="nav-button" onclick="location.href='index.html';">HOME</button>
+                <button class="nav-button" onclick="location.href='shop.html';">SHOP</button>
+                <button class="nav-button" onclick="location.href='category.html';">CATEGORY</button>
+                <button class="nav-button" onclick="location.href='contact.html';">CONTACT US</button>
+            </div>
+            <button class="cart-button" onclick="location.href='checkout.html';">
+                <img src=".\imageSrc\cart.png" alt="Cart" class="cart-icon">
+            </button>
+        </nav>
+    </div>
+    <div class="image-container">
+        <img src=".\imageSrc\responsive_image.jpg" alt="Spices" class="responsive-image">
+    </div>
+
+    <!-- Popup container -->
+    <div class="popup-container">
+        <!-- Popup trigger button -->
+        <button class="popup-trigger" onclick="togglePopup()">
+            <img src=".\imageSrc\arrow.png" alt="Menu" class="arrow-icon">
+        </button>
+
+        <!-- Popup menu -->
+        <div class="popup-menu" id="popupMenu">
+            <ul>
+                <li><a href="#">Featured Products</a></li>
+                <li><a href="#">Recipe Suggestions</a></li>
+                <li><a href="https://www.thespicehouse.com/blogs/news?srsltid=AfmBOoqHx6jtnhWKsHrtiXblbEVOpF4R-RS4910e2kB558gVSKN81CxR">Blog/Articles</a></li>
+                <li><a href="#">Customer Reviews</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 class="main-heading">Welcome to Our Spice Shop</h1>
+        <p class="main-text">Explore our wide range of spices and seasonings to add flavor to your dishes!</p>
+        <br>
+        <br>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 2">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 4 ">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 5">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 6">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 7">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="shop.html">
+                    <img src="./imageSrc/sample.png" alt="Spice 8">
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Coorg Spices Emporium. All Rights Reserved.</p>
+    </footer>    
+    <!-- JavaScript for popup functionality -->
+    <script>
+        function togglePopup() {
+            var popupMenu = document.getElementById("popupMenu");
+            var popupTrigger = document.querySelector(".popup-trigger");
+
+            popupMenu.classList.toggle("show");
+            // Adjust the button's position based on whether the popup is shown or not
+            if (popupMenu.classList.contains("show")) {
+                popupTrigger.style.left = "260px"; // Adjust spacing if needed
+            } else {
+                popupTrigger.style.left = "100%"; // Move it back out of view if needed
+            }
+        }
+    </script>
+</body>
+</html>
