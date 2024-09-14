@@ -202,7 +202,6 @@ body, h1, p, button {
 .gallery-item {
     overflow: hidden; /* Ensure images don't overflow */
     border-radius: 8px; /* Rounded corners for images */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for a subtle 3D effect */
 }
 
 .gallery-item img {
